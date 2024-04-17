@@ -1,0 +1,185 @@
+.slick-prev {
+    left      : -10 !important;
+    z-index   : 1000 !important;
+    height    : 48px !important;
+    width     : 44px !important;
+    background: #fff !important;
+    border    : 2px solid #d7d7d7 !important;
+
+    &:hover {
+        background: #eceaea !important;
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: FontAwesome !important;
+    color      : red !important;
+    // content: "\e257" !important;
+}
+
+.slick-next {
+    right     : -10 !important;
+    z-index   : 1000 !important;
+    height    : 48px !important;
+    width     : 44px !important;
+    background: #fff !important;
+    border    : 2px solid #d7d7d7 !important;
+
+    &:hover {
+        background: #eceaea !important;
+    }
+}
+
+.slick-disabled {
+    display: none !important;
+}
+
+.section-share {
+    &.specialty-section {
+        background: #f5f5f5;
+    }
+
+    &.medical-facility-section {}
+
+    &.outstanding-doctor-section {
+        background: #f5f5f5;
+    }
+
+    &.handbook-section {}
+
+    &.about-section {
+        height       : 500px !important;
+        border-top   : 1px solid #f5f5f5;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .section-body {
+        height: 100%;
+
+        .section-customize {
+            padding: 10px;
+
+            .customize-border {
+                border: 1px solid orange;
+            }
+
+            .bg-image {
+                width : 278px;
+                height: 150px;
+
+                &.specialty-section {
+                    // background: url('../../assets/speciality/co-xuong-khop.png');
+                    background-position: center;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-color   : #eee;
+                }
+
+                &.medical-facility-section {
+                    background         : url('../../assets/medical-facility/viet-duc.jpg');
+                    background-position: center center;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-color   : #eee;
+                }
+
+                &.outstanding-doctor-section {
+                    // background: url('../../assets/outstanding-doctor/doctor.png');
+                    width              : 120px;
+                    height             : 120px;
+                    border-radius      : 50%;
+                    background-position: center center;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-color   : #eee;
+                }
+
+                &.handbook-section {
+                    background         : url('../../assets/handbook/nha-khoa-uy-tin-quan-ba-dinh.png');
+                    background-position: center center;
+                    background-repeat  : no-repeat;
+                    background-size    : cover;
+                    background-color   : #eee;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+.section-share {
+    height: 330px;
+
+    .section-container {
+        margin        : 0 100px;
+        display       : flex;
+        flex-direction: column;
+
+        .section-header {
+            height       : 60px;
+            padding-top  : 30px;
+            margin-bottom: 30px;
+
+            .title-section {
+                font-size  : 22px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float         : right;
+                padding       : 10px 15px;
+                border        : none;
+                outline       : none;
+                display       : block;
+                background    : #ebebeb;
+                color         : black;
+                cursor        : pointer;
+                text-transform: uppercase;
+
+                &:hover {
+                    color     : #fff;
+                    background: #f7d800;
+                }
+            }
+        }
+    }
+}
+
+.outstanding-doctor-section {
+    .outer-bg {
+        display        : flex;
+        justify-content: center;
+        margin-bottom  : 10px;
+    }
+
+    .section-customize {
+        padding: 5px;
+        cursor : pointer;
+
+        .customize-border {
+            padding: 20px;
+        }
+    }
+}
+
+.about-section {
+    padding: 0 100px;
+
+    .about-header-section {
+        padding    : 20px 10px;
+        font-size  : 22px;
+        font-weight: 600;
+    }
+}
+
+.home-footer {
+    text-align : center;
+    padding-top: 8px;
+
+    a {
+        text-decoration: unset;
+    }
+}

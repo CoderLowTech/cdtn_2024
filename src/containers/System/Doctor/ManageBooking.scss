@@ -1,0 +1,59 @@
+div._loading_overlay_wrapper {
+    position: unset;
+
+    ._loading_overlay_overlay {
+        z-index: 10000000;
+    }
+}
+
+.manage-booking-container {
+    .manage-booking-title {
+        font-size     : 15px;
+        margin        : 15px 0;
+        text-align    : center;
+        text-transform: uppercase;
+    }
+
+    .manage-booking-body {
+        padding: 0 20px;
+
+        .table-manage-booking {
+            table {
+                width: 100%;
+            }
+
+            table,
+            th,
+            td {
+                border         : 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding   : 5px;
+                text-align: left;
+                border    : 1 px solid black;
+            }
+
+            button {
+                border : none;
+                outline: none;
+                cursor : pointer;
+            }
+
+            .manage-booking-btn-confirm {
+                margin-right : 10px;
+                height       : 30px;
+                border-radius: 3px;
+                background   : orange;
+            }
+
+            .manage-booking-btn-receipt {
+                height       : 30px;
+                border-radius: 3px;
+                background   : #39dca0;
+            }
+        }
+    }
+}
