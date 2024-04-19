@@ -1,13 +1,5 @@
-div._loading_overlay_wrapper {
-    position: unset;
-
-    ._loading_overlay_overlay {
-        z-index: 10000000;
-    }
-}
-
-.manage-booking-container {
-    .manage-booking-title {
+.history-container {
+    .history-title {
         font-size     : 15px;
         margin        : 15px 0;
         text-align    : center;
@@ -15,10 +7,10 @@ div._loading_overlay_wrapper {
         font-weight   : 600;
     }
 
-    .manage-booking-body {
+    .history-body {
         padding: 0 20px;
 
-        .table-manage-booking {
+        .table-history {
             table {
                 width: 100%;
             }
@@ -43,14 +35,14 @@ div._loading_overlay_wrapper {
                 cursor : pointer;
             }
 
-            .manage-booking-btn-confirm {
+            .history-btn-confirm {
                 margin-right : 10px;
                 height       : 30px;
                 border-radius: 3px;
                 background   : orange;
             }
 
-            .manage-booking-btn-receipt {
+            .history-btn-receipt {
                 height       : 30px;
                 border-radius: 3px;
                 background   : #39dca0;

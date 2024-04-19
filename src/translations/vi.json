@@ -44,7 +44,8 @@
         "doctor": {
             "schedule": "Kế hoạch khám bệnh",
             "manage-schedule": "Quản lí kế hoạch khám bệnh",
-            "manage-booking": "Quản lí lịch hẹn"
+            "manage-booking": "Quản lí lịch hẹn",
+            "history": "Lịch sử đặt lịch"
         }
     },
     "manage-user": {
@@ -101,6 +102,10 @@
         "title": "Quản lí lịch hẹn",
         "date": "Chọn ngày"
     },
+    "history": {
+        "title": "Lịch sử lịch hẹn",
+        "date": "Chọn ngày"
+    },
     "patient": {
         "detail-doctor": {
             "schedule": "Lịch khám",
@@ -153,6 +158,7 @@
         "phoneNumber": "Số điện thoại",
         "no-data": "Không có dữ liệu",
         "confirm": "Xác nhận",
-        "receipt": "Gửi hóa đơn"
+        "receipt": "Gửi hóa đơn",
+        "status": "Trạng thái"
     }
 }

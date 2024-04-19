@@ -44,7 +44,8 @@
         "doctor": {
             "schedule": "Schedules",
             "manage-schedule": "Manage schedules",
-            "manage-booking": "Manage bookings"
+            "manage-booking": "Manage bookings",
+            "history": "History appointment"
         }
     },
     "manage-user": {
@@ -101,6 +102,10 @@
         "title": "Manage booking appointment",
         "date": "Select date"
     },
+    "history": {
+        "title": "Appointment history",
+        "date": "Select date"
+    },
     "patient": {
         "detail-doctor": {
             "schedule": "Schedule",
@@ -153,6 +158,7 @@
         "phoneNumber": "Phone number",
         "no-data": "No data exists",
         "confirm": "Confirm",
-        "receipt": "Send receipt"
+        "receipt": "Send receipt",
+        "status": "Status"
     }
 }

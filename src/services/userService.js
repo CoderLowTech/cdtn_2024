@@ -96,6 +96,10 @@ const sendReceipt = (dataInput) => {
     return axios.post(`/api/send-receipt`, dataInput);
 }
 
+const getHistoryBookings = (dataInput) => {
+    return axios.get(`/api/get-history-booking?doctorId=${dataInput.doctorId}&date=${dataInput.date}`);
+}
+
 export {
     handleLogin,
     getAllUsers,
@@ -119,5 +123,6 @@ export {
     deleteSpecialty,
     editSpecialty,
     getListBookings,
-    sendReceipt
+    sendReceipt,
+    getHistoryBookings
 }
