@@ -16,7 +16,7 @@ class ManageSchedule extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedDoctor: '',
+            selectedDoctor: this.props.user.roleId === 'R1' ? '' : this.props.user.id,
             listDoctors: [],
             currentDate: '',
             listSchedules: [],
@@ -115,39 +115,68 @@ class ManageSchedule extends Component {
         let formattedDate = new Date(currentDate).getTime();
 
         if (listSchedules && listSchedules.length > 0) {
-            let selectedSchedules = listSchedules.filter(item => item.isSelected === true);
-            if (selectedSchedules && selectedSchedules.length > 0) {
-                selectedSchedules.map(item => {
-                    let object = {};
-                    object.doctorId = selectedDoctor.value;
-                    object.date = formattedDate;
-                    object.timeType = item.keyMap;
+            if (this.props.user.roleId === 'R1') {
+                let selectedSchedules = listSchedules.filter(item => item.isSelected === true);
+                if (selectedSchedules && selectedSchedules.length > 0) {
+                    selectedSchedules.map(item => {
+                        let object = {};
+                        object.doctorId = selectedDoctor.value;
+                        object.date = formattedDate;
+                        object.timeType = item.keyMap;
 
-                    result.push(object);
-                })
+                        result.push(object);
+                    })
+                } else {
+                    toast.error("Invalid selected time");
+                }
             } else {
-                toast.error("Invalid selected time");
+                let selectedSchedules = listSchedules.filter(item => item.isSelected === true);
+                if (selectedSchedules && selectedSchedules.length > 0) {
+                    selectedSchedules.map(item => {
+                        let object = {};
+                        object.doctorId = selectedDoctor;
+                        object.date = formattedDate;
+                        object.timeType = item.keyMap;
+
+                        result.push(object);
+                    })
+                } else {
+                    toast.error("Invalid selected time");
+                }
+            }
+
+        }
+
+        if (this.props.user.roleId === 'R1') {
+            let res = await saveBulkScheduleDoctor({
+                arraySchedule: result,
+                doctorId: selectedDoctor.value,
+                formattedDate: formattedDate
+            });
+            if (res.errorCode === 0) {
+                toast.success('Save schedule successfully');
+            } else {
+                toast.error("Existing schedule in system");
+            }
+        } else {
+            let res = await saveBulkScheduleDoctor({
+                arraySchedule: result,
+                doctorId: selectedDoctor,
+                formattedDate: formattedDate
+            });
+            if (res.errorCode === 0) {
+                toast.success('Save schedule successfully');
+            } else {
+                toast.error("Existing schedule in system");
             }
         }
-
-        let res = await saveBulkScheduleDoctor({
-            arraySchedule: result,
-            doctorId: selectedDoctor.value,
-            formattedDate: formattedDate
-        });
-
-        if (res.errorCode === 0) {
-            toast.success('Save schedule successfully');
-        } else {
-            toast.error("Existing schedule in system");
-        }
-
     }
 
     render() {
         const { language } = this.props;
         let { listSchedules, currentUserId, isAdmin, listDoctors } = this.state;
         let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+        console.log('check: ', this.state.selectedDoctor);
         return (
             <div className="manage-schedule-container">
                 <div className="manage-schedule-title"><FormattedMessage id="manage-schedule.title" /></div>
