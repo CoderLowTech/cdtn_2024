@@ -1,0 +1,27 @@
+.footer-container {
+    background-color: #eee;
+    color           : #333;
+    display         : flex;
+    padding         : 10px 90px;
+    justify-content : space-between;
+    flex-wrap       : wrap;
+
+    .footer-content-left {
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer-content-right {
+        background-color: #eee;
+        color           : #333;
+        padding         : 20px 0;
+        text-align      : center;
+
+        p {
+            margin   : 0;
+            font-size: 14px;
+        }
+    }
+}

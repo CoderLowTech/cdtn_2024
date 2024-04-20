@@ -19,7 +19,7 @@ class TableManageSpecialty extends Component {
         let res = await getAllSpecialty();
         if (res && res.errorCode === 0) {
             this.setState({
-                listSpecialty: res.data ? res.data : []
+                listSpecialty: res.data ? res.data.reverse() : []
             });
         }
     }
@@ -29,7 +29,7 @@ class TableManageSpecialty extends Component {
             let res = await getAllSpecialty();
             if (res && res.errorCode === 0) {
                 this.setState({
-                    listSpecialty: res.data ? res.data : []
+                    listSpecialty: res.data ? res.data.reverse() : []
                 });
             }
         }

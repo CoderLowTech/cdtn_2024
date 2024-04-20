@@ -160,5 +160,9 @@
         "confirm": "Xác nhận",
         "receipt": "Gửi hóa đơn",
         "status": "Trạng thái"
+    },
+    "footer": {
+        "address": "Địa chỉ",
+        "contact": "Liên hệ"
     }
 }

@@ -160,5 +160,9 @@
         "confirm": "Confirm",
         "receipt": "Send receipt",
         "status": "Status"
+    },
+    "footer": {
+        "address": "Address",
+        "contact": "Contact"
     }
 }
