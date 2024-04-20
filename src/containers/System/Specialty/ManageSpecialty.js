@@ -145,7 +145,7 @@ class ManageSpecialty extends Component {
         console.log('check image:', this.state.image);
         console.log('check preview image:', this.state.previewImageUrl);
         return (
-            <div className="manage-specialty-container">
+            <div className="manage-specialty-container container">
                 <div className="manage-specialty-title"><FormattedMessage id="manage-specialty.title" /></div>
                 <div className="add-new-specialty row">
                     <div className="col-6 form-group">

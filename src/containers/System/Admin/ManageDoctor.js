@@ -277,7 +277,7 @@ class ManageDoctor extends Component {
     let { hasOldData } = this.state;
     let language = this.props.language
     return (
-      <div className="manage-doctor-container">
+      <div className="manage-doctor-container container">
         <div className="manage-doctor-title"><FormattedMessage id="manage-doctor.title" /></div>
         <div className="more-info">
           <div className="content-left form-group">
