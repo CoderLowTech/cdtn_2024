@@ -70,7 +70,12 @@ class ManageBooking extends Component {
             patientId: item.patientId,
             email: item.patientData.email,
             timeType: item.timeType,
-            patientName: item.patientData.firstName
+            patientName: item.patientData.firstName,
+            doctorFirstName: item.bookingDoctorData.User.firstName,
+            doctorLastName: item.bookingDoctorData.User.lastName,
+            price: item.bookingDoctorData.priceTypeData,
+            time: item.timeData,
+            date: item.date
         }
         this.setState({
             isOpenConfirmModal: true,
@@ -97,7 +102,12 @@ class ManageBooking extends Component {
             patientId: dataModal.patientId,
             timeType: dataModal.timeType,
             language: this.props.language,
-            patientName: dataModal.patientName
+            patientName: dataModal.patientName,
+            doctorFirstName: dataModal.doctorFirstName,
+            doctorLastName: dataModal.doctorLastName,
+            price: dataModal.price,
+            time: dataModal.time,
+            date: dataModal.date
         });
         if (res && res.errorCode === 0) {
             this.setState({
