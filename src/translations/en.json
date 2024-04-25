@@ -161,6 +161,12 @@
         "receipt": "Send receipt",
         "status": "Status"
     },
+    "confirm-modal": {
+        "title": "Send receipt",
+        "email": "Patient's Email",
+        "send": "Send",
+        "cancel": "Cancel"
+    },
     "footer": {
         "address": "Address",
         "contact": "Contact"

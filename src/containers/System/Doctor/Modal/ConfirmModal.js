@@ -64,7 +64,7 @@ class ConfirmModal extends Component {
                 centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Gửi hóa đơn khám bệnh</h5>
+                    <h5 className="modal-title"><FormattedMessage id="confirm-modal.title" /></h5>
                     <button onClick={closeConfirmModal} type="button" className="close" aria-label="Close">
                         <span aria-hidden="true">x</span>
                     </button>
@@ -73,7 +73,7 @@ class ConfirmModal extends Component {
                     <div className="row">
                         <div className="col-6 form-group">
                             <div >
-                                <label>Email bệnh nhân:</label>
+                                <label><FormattedMessage id="confirm-modal.email" />:</label>
                                 <input className="form-control" type="email" value={email}
                                     onChange={(event) => this.handleOnChangeEmail(event)} />
                             </div>
@@ -81,8 +81,8 @@ class ConfirmModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={() => this.handleSendReceipt()}>Send</Button>{' '}
-                    <Button color="secondary" onClick={closeConfirmModal}>Cancel</Button>
+                    <Button color="primary" onClick={() => this.handleSendReceipt()}><FormattedMessage id="confirm-modal.send" /></Button>{' '}
+                    <Button color="secondary" onClick={closeConfirmModal}><FormattedMessage id="confirm-modal.cancel" /></Button>
                 </ModalFooter>
             </Modal>
         );

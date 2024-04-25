@@ -161,6 +161,12 @@
         "receipt": "Gửi hóa đơn",
         "status": "Trạng thái"
     },
+    "confirm-modal": {
+        "title": "Gửi hóa đơn",
+        "email": "Email bệnh nhân",
+        "send": "Gửi",
+        "cancel": "Hủy"
+    },
     "footer": {
         "address": "Địa chỉ",
         "contact": "Liên hệ"
